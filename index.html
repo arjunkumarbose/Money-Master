@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/money-bag.png" type="image/x-icon" />
+  </head>
+  <body class="bg-gray-100">
+    <h1
+      class="text-4xl font-bold text-[#31A5AC] mb-4 flex justify-center py-10"
+    >
+      Money Master💰
+    </h1>
+    <div class="container mx-auto p-8 flex items-center">
+      <div class="w-3/4">
+        <img src="images/money.jpg" alt="" class="max-w-full h-auto" />
+      </div>
+      <div class="w-3/4 pl-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-xl font-semibold mb-4">Income and Expenses</h2>
+          <div class="mb-4">
+            <label for="income" class="block mb-2">Income:</label>
+            <input
+              type="number"
+              id="income"
+              class="w-full p-2 border rounded"
+              placeholder="Enter your income"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="food" class="block mb-2">Food Expenses:</label>
+            <input
+              type="number"
+              id="food"
+              class="w-full p-2 border rounded"
+              placeholder="Enter food expenses"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="rent" class="block mb-2">Rent Expenses:</label>
+            <input
+              type="number"
+              id="rent"
+              class="w-full p-2 border rounded"
+              placeholder="Enter rent expenses"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="clothes" class="block mb-2">Clothing Expenses:</label>
+            <input
+              type="number"
+              id="clothes"
+              class="w-full p-2 border rounded"
+              placeholder="Enter clothing expenses"
+            />
+          </div>
+          <button
+            id="calculateBtn"
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+          >
+            Calculate
+          </button>
+        </div>
+        <div
+          class="bg-white mt-4 p-6 rounded-lg shadow-md hidden"
+          id="resultSection"
+        >
+          <h2 class="text-xl font-semibold mb-4">Results</h2>
+          <p>Total Expenses: <span id="totalExpenses">0</span></p>
+          <p>Balance: <span id="balance">0</span></p>
+          <div class="mt-4">
+            <label for="savingPercentage" class="block mb-2"
+              >Percentage to Save:</label
+            >
+            <input
+              type="number"
+              id="savingPercentage"
+              class="w-full p-2 border rounded"
+              placeholder="Enter saving percentage"
+            />
+          </div>
+          <button
+            id="saveBtn"
+            class="bg-green-500 text-white px-4 py-2 rounded mt-2"
+          >
+            Save
+          </button>
+          <p class="mt-4">Savings Amount: <span id="savingsAmount">0</span></p>
+          <p>Remaining Balance: <span id="remainingBalance">0</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
